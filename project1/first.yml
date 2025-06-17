@@ -6,12 +6,12 @@
   tasks:
    - name: task1
      ansible.builtin.yum:
-      name: httpd
+      name: "{{mypkg1}}"
       state: present
      tags: justinstall
    - name: task2
      ansible.builtin.service:
-      name: httpd
+      name: "{{mysvc1}}"
       state: started
       enabled: yes
    - name: task3
