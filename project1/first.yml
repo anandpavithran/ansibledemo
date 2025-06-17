@@ -8,6 +8,8 @@
      ansible.builtin.yum:
       name: "{{mypkg1}}"
       state: present
+     tags:
+       justinstall
    - name: task2
      ansible.builtin.service:
       name: "{{mysvc1}}"
