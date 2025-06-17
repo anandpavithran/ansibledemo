@@ -1,18 +1,17 @@
 ---
 - name: demo of webserver
   hosts: all
-  #gather_facts: false
+  gather_facts: false
    
   tasks:
    - name: task1
      ansible.builtin.yum:
-      name: "{{mypkg1}}"
+      name: httpd
       state: present
-     tags:
-       - justinstall
+     tags: justinstall
    - name: task2
      ansible.builtin.service:
-      name: "{{mysvc1}}"
+      name: httpd
       state: started
       enabled: yes
    - name: task3
