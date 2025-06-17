@@ -1,7 +1,7 @@
 ---
 - name: demo of webserver
   hosts: all
-  gather_facts: false
+  #gather_facts: false
    
   tasks:
    - name: task1
