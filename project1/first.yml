@@ -9,7 +9,7 @@
       name: "{{mypkg1}}"
       state: present
      tags:
-       justinstall
+       - justinstall
    - name: task2
      ansible.builtin.service:
       name: "{{mysvc1}}"
